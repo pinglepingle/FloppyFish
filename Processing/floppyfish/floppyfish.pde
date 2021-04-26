@@ -27,11 +27,12 @@ void draw() {
     movingBg.resize(1000, 700);
     image(movingBg, x, 0);
     image(movingBg, x+movingBg.width, 0);
-    image(fish, width/5, y);
+    image(fish, width/3, y);
     fish.resize(100, 100);
     x -= 2;
     vy += 1;
     y += vy;
+    if (x == -1000) x = 0;
     //background(startPage);
   }
   else {
@@ -47,7 +48,7 @@ void draw() {
 }
 
 void mousePressed() {
-  vy -= 50;
+  vy -= 23;
 }
 
 void mouseClicked() {
